@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-nia-orange: #FF9933;
+  --color-nia-green: #138808;
+  --color-nia-blue: #003D7C;
+  --color-nia-saffron: #FF9933;
+  --color-nia-white: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-900 bg-slate-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+}
+
+.btn-primary {
+  @apply bg-nia-orange hover:bg-nia-orange/90 text-white px-6 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-nia-blue hover:bg-nia-blue/90 text-white px-6 py-2 rounded-full font-medium transition-all shadow-md hover:shadow-lg active:scale-95;
+}
+
